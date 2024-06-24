@@ -1,0 +1,27 @@
+<ion-card>
+<ng-content select="[header]"></ng-content>
+  <ion-card-content>
+    <ion-item lines="none" class="call-card">
+      <ion-icon *ngIf="status === 'On Hold'" name="hourglass-outline" color="warning"></ion-icon>
+      <ion-icon *ngIf="status === 'Processing'" name="archive-outline" color="secondary"></ion-icon>
+      <ion-icon *ngIf="status === 'Finished'" name="checkmark-circle-outline" color="secondary"></ion-icon>
+      <ion-label class="time-date">
+        {{ status }}
+        <p>{{ updateAt }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item class="note" lines="none">
+      <ion-label>
+        <p class="mb-5">Created at {{ createAt }}</p>
+        <p *ngIf="notes!==''">Notes: {{ notes }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="status === 'Finished'" lines="none">
+      <ion-icon name="trophy" slot="start" color="success"></ion-icon>
+      <ion-label color="success">{{value}}</ion-label>
+    </ion-item>
+    <ng-content select="[footer]">
+
+    </ng-content>
+  </ion-card-content>
+</ion-card>

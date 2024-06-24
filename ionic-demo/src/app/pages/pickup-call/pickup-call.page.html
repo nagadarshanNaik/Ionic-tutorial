@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-button slot="start">
+      <ion-back-button text=""> </ion-back-button>
+    </ion-button>
+    <ion-title>Pickup Call</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <img class="map-img" src="../../../assets/map.jpg" alt="" />
+  <ion-card>
+    <ion-card-content>
+      <p>Address : Fake address</p>
+      <p>Byndoor taluk, Udupi district</p>
+      <p>Karnataka - 576232</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item lines="inset">
+      <ion-textarea label="Notes" labelPlacement="floating"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-button class="pickup-cl-but" size="full" color="success" (click)="onCreatePickUpCall()">Create pick up call</ion-button>
+</ion-content>

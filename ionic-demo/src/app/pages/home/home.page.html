@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar slot="end" color="success">
+    <ion-button color="none" slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-button>
+    <ion-title>Robo App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item class="avatar" lines="none" color="success">
+      <ion-avatar>
+        <img src="../../../assets/avatar.png" alt="" />
+      </ion-avatar>
+      <ion-label class="label">
+        <h1>Paul hamen</h1>
+        <p>Gathered : <span class="money">$15,000</span></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <app-pickup-call-card
+    [showHeader]="true"
+    [showFooter]="true"
+    [status]="'On Hold'"
+    [createAt]="'05/05/2024 10:33'"
+    [updateAt]="'06/05/2024 10:33'"
+    notes="We have 2 bags that are full, one with the plastic and other with galass."
+  >
+    <ion-card-header header>
+      <ion-card-subtitle> Last pick up call </ion-card-subtitle>
+    </ion-card-header>
+    <ion-button (click)="goToPickupCalls()"
+      footer
+      class="see-all-but"
+      color="success"
+      fill="clrear"
+      size="full"
+      >See all...</ion-button
+    >
+  </app-pickup-call-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="newPickUpCall()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

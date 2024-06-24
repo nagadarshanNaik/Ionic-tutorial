@@ -1,0 +1,16 @@
+ion-list {
+  padding: 0;
+  box-shadow: 0 1px 2px 1px rgb(0 0 0 / 20%);
+  .avatar {
+    border-bottom: 1px solid black !important;
+  }
+  ion-item {
+    .label {
+      margin-left: 15px;
+      .money {
+        font-weight: 600;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,35 @@
+ion-content{
+  --background:  #2dd55b;
+  --keyboard-offset: 0px !important;
+}
+ion-radio {
+  --border-radius: 4px;
+  --inner-border-radius: 4px;
+
+  --color: #ddd;
+  --color-checked: #6815ec;
+}
+
+ion-radio.ios::part(container) {
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+.radio-checked.ios::part(container) {
+  border-color: #6815ec;
+}
+.register-button{
+  margin: 16px;
+}
+.white-button {
+  --background: transparent;
+  --outline: none;
+  --background-activated: none;
+  ion-back-button.ios.button.back-button-has-icon-only.in-toolbar.in-toolbar-color.ion-activatable.ion-focusable.hydrated {
+    color: white;
+  }
+}
+

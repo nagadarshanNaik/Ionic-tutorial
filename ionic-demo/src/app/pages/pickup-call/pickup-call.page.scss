@@ -1,0 +1,18 @@
+ion-toolbar {
+  ion-button {
+    --background: transparent;
+    --outline: none;
+    --background-activated: none;
+  }
+}
+ion-content {
+  --keyboard-offset: 0px !important;
+  .map-img {
+    width: 100%;
+  }
+  .pickup-cl-but{
+    margin: 16px;
+  }
+
+}
+

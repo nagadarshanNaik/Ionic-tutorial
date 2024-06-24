@@ -1,0 +1,26 @@
+ion-toolbar {
+  ion-button {
+    --background: transparent;
+    --outline: none;
+    --background-activated: none;
+  }
+}
+ion-card {
+  ion-card-content {
+    ion-card-subtitle {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .time-date {
+      margin-left: 25px;
+    }
+    .note {
+      .mb-5 {
+        margin-bottom: 5px;
+      }
+    }
+    .see-all-but{
+      color: #2dd55b;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+<ion-content>
+  <div class="flex-center">
+    <form [formGroup]="loginForm">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">Robo App</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-input
+              label="Email"
+              labelPlacement="floating"
+              placeholder="Enter Email"
+              type="email"
+              formControlName="email"
+            ></ion-input>
+          </ion-item>
+          <app-error-message
+            [errorMessage]="'Email is required'"
+            [field]="loginForm.get('email')"
+            [errorType]="'required'"
+          ></app-error-message>
+          <app-error-message
+          [errorMessage]="'Email is Invalid'"
+          [field]="loginForm.get('email')"
+          [errorType]="'email'"
+        ></app-error-message>
+          <!-- <ion-label
+            class="pl-16"
+            *ngIf="( loginForm.get('email')?.touched || loginForm.get('email')?.dirty) && loginForm.get('email')?.errors?.['required']"
+            color="danger"
+          >
+            Email is required
+          </ion-label> -->
+          <!-- <ion-label
+            class="pl-16"
+            *ngIf="(loginForm.get('email')?.touched ||  loginForm.get('email')?.dirty) && loginForm.get('email')?.errors?.['email']"
+            color="danger"
+          >
+            Email is invalid
+          </ion-label> -->
+          <ion-item>
+            <ion-input
+              label="Password"
+              labelPlacement="floating"
+              placeholder="Enter Password"
+              type="password"
+              formControlName="password"
+            ></ion-input>
+          </ion-item>
+          <app-error-message
+          [errorMessage]="'Password is Required'"
+          [field]="loginForm.get('password')"
+          [errorType]="'required'"
+        ></app-error-message>
+          <!-- <ion-label
+            class="pl-16"
+            *ngIf="( loginForm.get('password')?.touched || loginForm.get('password')?.dirty) && loginForm.get('password')?.errors?.['required']"
+            color="danger"
+          >
+            Password is required
+          </ion-label> -->
+          <ion-button
+            fill="clear"
+            size="full"
+            color="dark"
+            [disabled]="!loginForm.get('email')?.valid"
+            (click)="onForgotEmailPass()"
+            >Forgot Email/Password</ion-button
+          >
+          <ion-button
+            size="full"
+            color="success"
+            [disabled]="!loginForm.valid"
+            (click)="onLogin()"
+            >Login</ion-button
+          >
+          <ion-button
+            fill="clear"
+            size="full"
+            color="success"
+            (click)="onRegister()"
+            >Register</ion-button
+          >
+        </ion-card-content>
+      </ion-card>
+    </form>
+  </div>
+</ion-content>
+
+<!-- [ngClass]="{ 'invalid-input': loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched) }" -->
